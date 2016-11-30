@@ -1,0 +1,34 @@
+{
+    "name": "grahamsfault/legiscan-sdk",
+    "description": "Legiscan API interface",
+    "authors": [
+        {
+            "name": "Graham Benevelli",
+            "email": "grahambenevelli@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Grahamsfault\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "grahamsfault/tadgola": "dev-master",
+        "guzzlehttp/guzzle": "~6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8"
+    },
+    "scripts": {
+        "phpunit": "phpunit --bootstrap vendor/autoload.php tests --exclude-group integration",
+        "integration": "phpunit --bootstrap vendor/autoload.php tests --group integration",
+        "now": "phpunit --bootstrap vendor/autoload.php tests --group now"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/grahambenevelli/tadgola.git"
+        }
+    ]
+}
